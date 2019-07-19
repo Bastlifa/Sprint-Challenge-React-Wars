@@ -35,3 +35,10 @@ export const HR = styled.hr`
     width: 80%;
     border: 1px solid #FFE81F;
 `;
+
+export const Button = styled.button`
+    border: 1px solid #FFE81F;
+    border-radius: 8px;
+    color: #FFE81F;
+    background-color: black;
+`;
