@@ -14,7 +14,7 @@ export const Header = styled.h3`
 export const Grid = styled.div`
     display: flex;
     flex-flow: row wrap;
-    width: 95%;
+    
     justify-content: space-around;
 `;
 
