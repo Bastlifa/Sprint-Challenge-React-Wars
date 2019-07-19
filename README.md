@@ -32,9 +32,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What does it mean to _think_ in react?
 
-    I have no idea. What kind of question is this? If I'm pressed, I guess it means to think in terms of components, prop drilling, states, and effect syncing.
+    I guess it means to think in terms of components, prop drilling, states, and effect syncing.
 
-    In reality, it means to be confused why the exact same structure that worked with the NASA project lead to errors with the React Wars project. I still have no clue why I had to put in all of the checks I did (if (obj) setThing(obj.thing)), when I didn't have to do that on the NASA project. Is it just because the site is slower? Was NASA project working a race condition?
 
 - [ ] Describe state.
 
