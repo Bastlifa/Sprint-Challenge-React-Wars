@@ -42,3 +42,7 @@ export const Button = styled.button`
     color: #FFE81F;
     background-color: black;
 `;
+
+export const YellowH1 = styled.h1`
+    color: #FFE81F;
+`;

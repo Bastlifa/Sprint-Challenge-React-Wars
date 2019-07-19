@@ -1,13 +1,12 @@
 import React from 'react'
 import CharCard from '../CharCard/CharCard'
 import {Grid} from '../StyledComps'
-export default function CharCards({swChars})
+export default function CharCards({swChars, curPage})
 {
-    console.log("swChars[0]", swChars[0]);
-    return swChars ?  (
-
+    return (
         <Grid>
-            {swChars.map((swChar, index) => <CharCard key={index} charObj={swChar} />)}
+            {swChars.map((swChar, index) => <CharCard key={index} charObj={swChar} curPage={curPage}/>)}
         </Grid>
-    ) : <div></div>
+    )
+    
 }
