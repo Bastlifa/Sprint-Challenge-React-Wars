@@ -41,6 +41,7 @@ export const Button = styled.button`
     border-radius: 8px;
     color: #FFE81F;
     background-color: black;
+    margin: 5px;
 `;
 
 export const YellowH1 = styled.h1`

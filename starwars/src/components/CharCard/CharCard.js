@@ -22,7 +22,7 @@ export default function CharCard(props)
         {
             console.log('a')
             setCharName(charObj.name)
-            setFilms(charObj.films)
+            // setFilms(charObj.films)
             setHeight(charObj.height)
             setMass(charObj.mass)
             setHairColor(charObj.hair_color)
