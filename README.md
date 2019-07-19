@@ -26,13 +26,29 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+    React JS lets us write to the virtual DOM, which then checks the DOM to see if it needs
+    updating. With JSX, we can more easily write components, and with hooks we can use state
+    and update the DOM when they change.
+
 - [ ] What does it mean to _think_ in react?
+
+    I have no idea. What kind of question is this? If I'm pressed, I guess it means to think in terms of components, prop drilling, states, and effect syncing.
+
+    In reality, it means to be confused why the exact same structure that worked with the NASA project lead to errors with the React Wars project. I still have no clue why I had to put in all of the checks I did (if (obj) setThing(obj.thing)), when I didn't have to do that on the NASA project. Is it just because the site is slower? Was NASA project working a race condition?
 
 - [ ] Describe state.
 
+    Store of data to be managed with setters.
+
 - [ ] Describe props.
 
+    Parameters for components, which allows for reusability of them.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+    A side effect is something that affects something outside of the function's scope. 
+    You sync an effect to a state or prop by putting them in the dependency array parameter 
+    of useEffect
 
 ## Project Set Up
 
