@@ -1,17 +1,37 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
+import CharCards from './components/CharCards/CharCards'
+import {DarkBody, YellowH1} from './components/StyledComps'
+import Pagination from './components/Pagination/Pagination'
+
 import './App.css';
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
 
-  // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  const [swChars, setSWChars] = useState([])
 
+  // const [curPage, setCurPage] = useState('https://henry-mock-swapi.herokuapp.com/api/?page=1')
+  const [curPage, setCurPage] = useState('https://swapi.co/api/people/?page=1')
+
+  useEffect( _ =>
+    {
+        console.log('stop hitting their server')
+        axios.get(curPage)
+        .then(response => 
+        {
+          setSWChars(response.data.results)
+          
+        })
+        .catch(err => console.log(err))
+    }, [curPage])
+    
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <YellowH1>React Wars</YellowH1>
+      <Pagination setCurPage={setCurPage} curPage={curPage} />
+      <DarkBody>
+        <CharCards swChars={swChars} curPage={curPage} />
+      </DarkBody>
     </div>
   );
 }
